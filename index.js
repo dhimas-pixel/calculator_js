@@ -85,9 +85,27 @@ clearAll.addEventListener("click", () => {
 })
 
 clearLast.addEventListener("click", () => {
-    displayInput.innerText = '0';
-    dis2Num = '';
-    haveDot = false;
+    if (tempResult.innerText === '' || tempResult.innerText === null) {
+        clearAll.click();
+        return;
+    }
+
+    let lastChar = dis2Num[dis2Num.length - 1];
+    if (lastChar === ".") haveDot = false;
+
+    console.log(lastChar)
+
+
+    if (dis2Num.length < 1) {
+        displayInput.innerText = '0';
+        dis2Num = '';
+        haveDot = false;
+        return;
+    }
+    1
+    dis2Num = dis2Num.substring(0, dis2Num.length - 1);
+    displayInput.innerText = dis2Num;
+
 })
 
 window.addEventListener("keydown", (e) => {
