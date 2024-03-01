@@ -96,7 +96,7 @@ clearLast.addEventListener("click", () => {
     console.log(lastChar)
 
 
-    if (dis2Num.length < 1) {
+    if (dis2Num.length <= 1) {
         displayInput.innerText = '0';
         dis2Num = '';
         haveDot = false;
